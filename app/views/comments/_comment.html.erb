@@ -1,17 +1,17 @@
 
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
 
-<p>
-<%= link_to 'Destroy Comment', [comment.article, comment],
+<blockquote class="blockquote mb-3">
+    
+    
+      <p><%= comment.body %></p>
+      <footer class="blockquote-footer"><%=  comment.commenter %></cite></footer>
+
+      
+</blockquote>
+
+<%= link_to 'Delete', [comment.article, comment],
                method: :delete,
+               class:"btn btn-outline-danger btn-sm",
                data: { confirm: 'Are you sure?' } %>
 
 </p>
