@@ -1,16 +1,16 @@
 class ArticlesController < ApplicationController
 
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     def index
         @articles = Article.all
         render json:@articles
-      end
+    end
       
     def show
         @article = Article.find(params[:id])
     end
 
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     def new
         @article = Article.new
     end
@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
         end
     end
 
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     def edit
         @article = Article.find(params[:id])
     end
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
         end
     end
 
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     def destroy
         @article = Article.find(params[:id])
         @article.destroy

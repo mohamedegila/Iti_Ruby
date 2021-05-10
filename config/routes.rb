@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
 
+ resource :users, only: [:create]
+ post "/login", to: "users#login"
+ get "/auto_login", to: "users#auto_login"
   
 resources :articles do
   resources :comments
