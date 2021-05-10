@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.3'
 
+#Serializers
+gem "active_model_serializers", "~> 0.8.0"
+
+
 #Devise 4.0 works with Rails 4.1 onwards
 gem 'devise'
 
